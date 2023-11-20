@@ -1,5 +1,6 @@
 import os
 from PIL import Image
+import numpy as np
 
 def get_files(folder, name_filter=None, extension_filter=None):
     if not os.path.isdir(folder):
@@ -25,3 +26,12 @@ def pil_loader(data_path, label_path):
     data = Image.open(data_path)
     label = Image.open(label_path)
     return data, label
+
+def cal_metric(preds,labels,num_classes):
+    acc_list=[0.0]*num_classes
+    for i in range(num_classes):
+        mask=(labels==i)
+        acc=(preds[mask]==labels[mask]).sum()/(mask.sum()+1e-10)
+        acc_list[i]=acc
+    rs=np.mean(acc_list)
+    return rs
