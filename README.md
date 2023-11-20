@@ -1,6 +1,6 @@
 # ADL-project-semantic-segmentation
 
-## data: https://www.kaggle.com/datasets/jcoral02/camvid
+## data: https://www.kaggle.com/datasets/jcoral02/camvid OR https://github.com/alexgkendall/SegNet-Tutorial
 
 ## References
 - https://github.com/davidtvs/PyTorch-ENet

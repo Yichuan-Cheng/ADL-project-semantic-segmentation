@@ -352,7 +352,7 @@ class DualResNet(nn.Module):
         else:
             return x_      
 def get_model():
-    model = DualResNet(BasicBlock, [2, 2, 2, 2], num_classes=19, planes=64, spp_planes=128, head_planes=128, augment=False)
+    model = DualResNet(BasicBlock, [2, 2, 2, 2], num_classes=11, planes=64, spp_planes=128, head_planes=128, augment=False)
     return model
 # def DualResNet_imagenet(pretrained=False):
 #     model = DualResNet(BasicBlock, [2, 2, 2, 2], num_classes=19, planes=64, spp_planes=128, head_planes=128, augment=False)
